@@ -1,10 +1,10 @@
 # General apps
 cask install google-chrome
+cask install firefox
 cask install google-drive
 cask install dropbox
 cask install skype
 cask install evernote
-cask install firefox
 
 # Install and update scope for Alfred
 cask install alfred
