@@ -1,0 +1,63 @@
+# Change the prefix key to Ctrl-f.
+unbind C-b
+set -g prefix C-f
+ 
+# Change the last active window keybinding.
+unbind l
+bind C-f last-window
+ 
+# Change the copy mode keybinding.
+unbind [
+bind Escape copy-mode
+ 
+# Use Vi mode.
+setw -g mode-keys vi
+ 
+# Allow mouse usage in copy mode.
+setw -g mode-mouse on
+set-option -g mouse-select-pane on  
+set-option -g mouse-select-window on  
+# set-window-option -g mode-mouse on 
+ 
+# Change the split window keybindings.
+unbind %
+bind | split-window -h
+bind h split-window -h
+unbind '"'
+bind - split-window -v
+bind v split-window -v
+ 
+# Configure history limit.
+set -g history-limit 1000
+ 
+# Configure the pane.
+unbind M-Left
+unbind M-Right
+unbind M-Up
+unbind M-Down
+bind C-k resize-pane -U 5
+bind C-j resize-pane -D 5
+bind C-h resize-pane -L 5
+bind C-l resize-pane -R 5
+ 
+# Configure the status bar.
+set -g status-bg black
+set -g status-fg white
+set -g status-interval 1
+set -g status-justify centre
+set -g status-left-length 120
+set -g status-right '#[fg=green,bold][ %Y-%m-%d %H:%M:%S ]#[default]'
+ 
+# Monitor activity.
+setw -g monitor-activity on
+set -g visual-activity on
+ 
+# Highlight the current window in the status bar.
+setw -g window-status-current-fg green
+ 
+# Configure the clock.
+setw -g clock-mode-colour green
+setw -g clock-mode-style 24
+
+set-option -g allow-rename off
+set-option -g default-shell /bin/zsh
