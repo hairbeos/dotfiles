@@ -20,7 +20,7 @@ cask install dash
 # Utilities
 cask install the-unarchiver
 cask install igetter
-cask install remote-desktop-connection
+# cask install remote-desktop-connection
 
 # Cleanup
 cleanup
