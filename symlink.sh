@@ -21,15 +21,15 @@ then
     ln -sfn "$src" "$dst"
   done
 
-  mkdir -p "$HOME/.dotfiles"
-  # Symlink .zsh
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.zsh')
-  do
-    mkdir -p "$HOME/.dotfiles/$(basename $(dirname "$src"))"
-    dst="$HOME/.dotfiles/$(basename $(dirname "$src"))/$(basename "$src")"
-    ln -sfn "$src" "$dst"
-    # echo "$dst"
-  done
+  # mkdir -p "$HOME/.dotfiles"
+  # # Symlink .zsh
+  # for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.zsh')
+  # do
+  #   mkdir -p "$HOME/.dotfiles/$(basename $(dirname "$src"))"
+  #   dst="$HOME/.dotfiles/$(basename $(dirname "$src"))/$(basename "$src")"
+  #   ln -sfn "$src" "$dst"
+  #   # echo "$dst"
+  # done
 
   # Symlink .ssh
   if [ -d $HOME/Google\ Drive/.ssh ]; then
@@ -42,7 +42,7 @@ then
   fi
 
   # Using zsh reload! to reload current profile
-  reload!
+  . ~/.zshrc
 fi
 
 unset DOTFILES_ROOT
