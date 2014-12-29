@@ -3,9 +3,9 @@
 
 if test ! $(which rvm) 
 then
-  info "Installing RVM with Ruby ..."
+  echo "Installing RVM with Ruby ..."
   gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
-  ruby -e "$(curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable --ruby --auto-dotfiles)"
+  curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
 fi
 
 # reload rvm
