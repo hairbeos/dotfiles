@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 #
 
-if ! which rvm >/dev/null; then
+if test ! $(which rvm) 
+then
   info "Installing RVM with Ruby ..."
-  ruby -e "$(curl -sSL https://get.rvm.io | bash -s stable --ruby)" > /tmp/rvm-install.log
+  curl -#LO https://rvm.io/mpapis.asc
+  gpg --import mpapis.asc
+  ruby -e "$(curl -sSL https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable --ruby)"
 fi
+
+# reload rvm
+source "$HOME/.rvm/scripts/rvm"
 
 # Install Tmuxinator
 gem install tmuxinator

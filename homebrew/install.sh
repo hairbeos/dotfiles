@@ -9,7 +9,7 @@
 if test ! $(which brew)
 then
   info "Installing Homebrew ..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   # Update homebrew
   info "Updating Homebrew ..."
@@ -22,6 +22,9 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 # brew install brew-cask
 # brew install grc coreutils spark
+
+# install gpg
+brew install gnupg gnupg2
 
 # Install Git
 brew install git

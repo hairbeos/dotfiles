@@ -18,6 +18,7 @@ cask install virtualbox
 cask install dash
 
 # Utilities
+cask install tunnelblick
 cask install the-unarchiver
 cask install igetter
 cask install ccleaner
