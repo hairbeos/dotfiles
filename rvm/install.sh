@@ -8,8 +8,10 @@ then
   curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
 fi
 
+echo 'Reloading RVM'
 # reload rvm
-source "$HOME/.rvm/scripts/rvm"
+source $HOME/.rvm/scripts/rvm
 
+echo 'Installing gems...'
 # Install Tmuxinator
 gem install tmuxinator
