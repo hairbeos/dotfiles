@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#
+# encoding: utf-8
+
 source functions/logs.sh
 
 DOTFILES_ROOT=$(pwd)
@@ -42,7 +43,7 @@ then
   fi
 
   # Using zsh reload! to reload current profile
-  . ~/.zshrc
+  source ~/.zshrc
 fi
 
 unset DOTFILES_ROOT

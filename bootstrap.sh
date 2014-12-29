@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#
+# encoding: utf-8
+
 source functions/logs.sh
 
 DOTFILES_ROOT=$(pwd)
