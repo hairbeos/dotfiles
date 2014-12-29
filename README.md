@@ -5,7 +5,7 @@ sh bootstrap.sh
 
 # Install apps
 ``` bash
-brew bundle
+sh install-apps.sh
 ```
 
 # Symlinks files
