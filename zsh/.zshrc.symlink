@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
-DEFAULT_USER=pataha
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -96,3 +96,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # done
 
 # unset DOTFILES_ROOT
+
+# Hide computer and username
+export DEFAULT_USER=`whoami`
