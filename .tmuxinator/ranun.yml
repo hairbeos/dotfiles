@@ -1,7 +1,7 @@
 # ~/.tmuxinator/ranun.yml
 
 name: ranun
-root: /Volumes/WORK/projects/ranun/
+root: ~/WORK/projects/ranun/
 
 # Optional tmux socket
 # socket_name: foo
@@ -34,12 +34,12 @@ windows:
           - rails s
         - app:
           - cd vagrant
-          - sleep 60
+          - sleep 45
           - be vagrant ssh
           - cd app
         - console:
           - cd vagrant
-          - sleep 60
+          - sleep 45
           - be vagrant ssh
           - cd app
           - rails c
@@ -48,12 +48,12 @@ windows:
       panes:
         - pool:
           - cd vagrant
-          - sleep 60
+          - sleep 45
           - be vagrant ssh
           - cd app
         - scheduler:
           - cd vagrant
-          - sleep 60
+          - sleep 45
           - be vagrant ssh
           - cd app
 
