@@ -23,6 +23,8 @@ brew cask install the-unarchiver
 brew cask install igetter
 brew cask install ccleaner
 # brew cask install remote-desktop-connection
+# windows resize and move
+brew cask install spectacle
 
 # Cleanup
 brew cleanup
