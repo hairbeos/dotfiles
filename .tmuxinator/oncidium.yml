@@ -1,0 +1,58 @@
+# ~/.tmuxinator/oncidium.yml
+
+name: oncidium
+root: ~/WORK/projects/oncidium/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - editor:
+    - cd oncidium
+  - vagrant:
+      layout: c220,158x40,0,0[158x14,0,0,1,158x25,0,15{78x25,0,15,2,79x25,79,15,3}]
+      panes:
+        - server:
+          - cd vagrant
+          - be vagrant up
+          - be vagrant ssh
+          - cd app
+          - bundle install
+          - rake db:migrate
+          - rails s
+        - app:
+          - cd vagrant
+          - sleep 45
+          - be vagrant ssh
+          - cd app
+        - console:
+          - cd vagrant
+          - sleep 45
+          - be vagrant ssh
+          - cd app
+          - rails c
+  - workers:
+      layout: even-horizontal
+      panes:
+        - pool:
+          - cd vagrant
+          - sleep 45
+          - be vagrant ssh
+          - cd app
+        - scheduler:
+          - cd vagrant
+          - sleep 45
+          - be vagrant ssh
+          - cd app
