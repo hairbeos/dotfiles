@@ -12,7 +12,7 @@ brew cask alfred link
 
 # Apps for dev
 brew cask install iterm2
-brew cask install sublime-text3
+brew cask install sublime-text
 brew cask install sourcetree
 brew cask install virtualbox
 # brew cask install dash
