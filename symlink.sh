@@ -44,11 +44,11 @@ then
 
   # Symlink Sublime Text packages and preferences
   if [ -d $HOME/Google\ Drive/PATAHA-MBP/Sublime/Packages ]; then
-    ln -sfn $HOME/Google\ Drive/PATAHA-MBP/Sublime/Packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
+    ln -sfn $HOME/Google\ Drive/PATAHA-MBP/Sublime/Packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/
   fi
 
   if [ -d $HOME/Google\ Drive/PATAHA-MBP/Sublime/Installed\ Packages ]; then
-    ln -sfn $HOME/Google\ Drive/PATAHA-MBP/Sublime/Installed\ Packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+    ln -sfn $HOME/Google\ Drive/PATAHA-MBP/Sublime/Installed\ Packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/
   fi
 
   # Using zsh reload! to reload current profile
